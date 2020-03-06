@@ -27,10 +27,6 @@ namespace StudentExercises
             };
             AdamS.AssignExercise(MartinsAquarium, HoldenP);
             AdamS.AssignExercise(GlassdalePD, HoldenP);
-            AdamS.AssignExercise(MartinsAquarium, DanielF);
-            AdamS.AssignExercise(GlassdalePD, DanielF);
-            AdamS.AssignExercise(MartinsAquarium, MattC);
-            AdamS.AssignExercise(GlassdalePD, MattC);
             AdamS.AssignExercise(MartinsAquarium, SpencerT);
             AdamS.AssignExercise(GlassdalePD, SpencerT);
 
@@ -38,27 +34,15 @@ namespace StudentExercises
             {
                 Specialty = "Dancing"
             };
-            MoS.AssignExercise(PlanYourHeist, HoldenP);
-            MoS.AssignExercise(Nutshell, HoldenP);
             MoS.AssignExercise(PlanYourHeist, DanielF);
             MoS.AssignExercise(Nutshell, DanielF);
-            MoS.AssignExercise(PlanYourHeist, MattC);
-            MoS.AssignExercise(Nutshell, MattC);
-            MoS.AssignExercise(PlanYourHeist, SpencerT);
-            MoS.AssignExercise(Nutshell, SpencerT);
 
             Instructor SteveB = new Instructor("Steve", "Brownlee", "@coach", Evening6)
             {
                 Specialty = "Dad Jokes"
             };
-            SteveB.AssignExercise(Nutshell, HoldenP);
-            SteveB.AssignExercise(MartinsAquarium, HoldenP);
-            SteveB.AssignExercise(Nutshell, DanielF);
-            SteveB.AssignExercise(MartinsAquarium, DanielF);
             SteveB.AssignExercise(Nutshell, MattC);
             SteveB.AssignExercise(MartinsAquarium, MattC);
-            SteveB.AssignExercise(Nutshell, SpencerT);
-            SteveB.AssignExercise(MartinsAquarium, SpencerT);
 
             List<Student> AllStudents = new List<Student>();
 
@@ -71,7 +55,7 @@ namespace StudentExercises
             {
                 foreach (Exercise exercise in student.Exercises)
                 {
-                    Console.WriteLine($"{student.FirstName} is working on the {exercise.Name} {exercise.Language} exercise.");
+                    Console.WriteLine($"{student.FirstName} is working on the {exercise.Name} {exercise.Language} exercise in {student.Cohort.Name}.");
                 }
             }
 
